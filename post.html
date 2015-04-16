@@ -29,6 +29,8 @@
     <link href="assets/css/animations.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -77,69 +79,50 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-    <section  style="background-image:url(img/bgi.jpg);">
-        <div class="header-content">
-            <div class="container" style="background-color:rgb(47,120,204);height:900px;margin-top:-35px;padding:80px">
-                <div class="row">
-                    <form role="form">
-                        <div class="container" style="margin-bottom:40px">
-                            <h3 style="color:white">Your travel post starts from here.</h3>
-                        </div>
-                        <div class="col-lg-6">
-                            
-                            <div class="form-group">
-                                <label for="InputName">Article Subject</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="InputName" id="InputName" style="margin:0px;width:700px;" placeholder="Enter Subject" required>
-                                   
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="InputMessage">Article Content</label>
-                                <div class="input-group">
-                                    <textarea name="InputMessage" id="InputMessage" class="form-control" rows="25" style="margin:0px;width:700px;" required></textarea>
-                                                                    </div>
-                            </div>
-                            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-                        </div>
-                    </form>
-                    
-                </div>
-            </div>
+    
+  
+<section id="content" class="contact ng-scope" ng-controller="ContactController as ctrl" style="background-image:url(img/wallpaper1.jpeg);background-size: cover;">
+    <div class="container">
+      <div class="padded">
+        <h2>Post</h2>
+      </div>
+      <form method="post" name="contact" ng-submit="ctrl.onSubmit(form)" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+        <div class="field">
+          <input type="text" placeholder="TITLE" required="" ng-model="form.name" class="ng-pristine ng-untouched ng-invalid ng-invalid-required">
         </div>
-    </section>
+        <div class="cols cols-2">
+          <div class="col">
+            <div class="field">
+              <input type="email" placeholder="AUTHOR (YOUR NAME BY DEFAULT)" required="" ng-model="form.email" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-touched">
+            </div>
+          </div>
+          <div class="col">
+            <div class="field">
+              <select class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" required="" ng-model="form.inquirytype">
+                <option value="">WHO CAN SEE THIS ARTICLE
+                </option><option value="0">All users
+                </option><option value="1">Friends
+                </option><option value="2">Only me
+              </option></select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <textarea placeholder="CONTENT" required="" ng-model="form.message" class="ng-pristine ng-invalid ng-invalid-required ng-touched"></textarea>
+        </div>
+
+          <!-- ngIf: !ctrl.submitted --><div class="field center ng-scope" ng-if="!ctrl.submitted">
+            <button type="submit" class="rounded lg wide" ng-disabled="contact.$invalid" disabled="disabled">Submit</button>
+          </div><!-- end ngIf: !ctrl.submitted -->
+          <!-- ngIf: ctrl.submitted -->
+          <!-- ngIf: ctrl.error -->
+      </form>
+    </div>
+  </section>
+    
     
 
-    <section id="footer" style='height:120px'>
-        <div class="col-lg-4 col-lg-offset-4 text-center" style="margin-top:-70px">
-                        <span style="color: #acadaf; position: absolute; left: 18px; top: 0; font-size: 14pt; text-align: left; font-family: FontAwesome;color:rgb(47,120,204)"></span>
-                    <input type="email" style="text-indent: 26px; border-top:0; border-right: 0; border-bottom: 1px solid rgb(47,120,204); border-left:0; color: #82ACC4; width: 100%; font-family: 'adobe-garamond-pro', Garamond, 'Hoefler Text', 'Times New Roman', serif; font-weight: 300; font-size: 14pt; font-style: italic; text-align:left;color:rgb(47,120,204)" value="" name="EMAIL" class="email" id="mce-EMAIL" required="">
-                    <label style="display: block; width: 100%; font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12pt; color:rgb(47,120,204);font-weight: 300;;font-style:normal" >Join Our Mailing List</label>
-                </div>
-        <div class="container">
-                
-                <hr style="width:1100PX; max-width:2000px;border-width: 1px;">
-                
-                <div class="col-lg-4 col-lg-offset-1" style="width:950px;font-weight:300;">
-                    <span style="color:rgb(47,120,204);float:left;">© 2015  <a href="#">HoneyComb</a></span>
-                    <span>
-                        <a href="#" style="margin-left:200px;font-size:15pt">About&nbsp;Us</a>
-                        <a href="#" style="margin-left:50px;font-size:15pt">Contact&nbsp;Us</a>
-                    </span>
-                    <p style='float:right'>
-                        <a href='#'><i class="fa fa-instagram"></i></a>
-                        <a href='#'><i class="fa fa-facebook-square"></i></a>
-                        <a href='#'><i class="fa fa-twitter-square"></i></a>
-                        <a href='#'><i class="fa fa-qq"></i></a>
-                        <a href='#'><i class="fa fa-tencent-weibo"></i></a>
-                        <a href="#"><i class="fa fa-github-square"></i></a>
-                        <a href="#"><i class="fa fa-weixin"></i></a>
-                    </p>
-                </div>
-        </div>
-    </section>
+    
     
     <!--modal!-->
     <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
