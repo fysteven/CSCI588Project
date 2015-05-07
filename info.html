@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/x-icon" href="img/issac.ico"/>
-    <title>Registration -- Honeycomb</title>
+    <title>Registration -- On the Road</title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">Honeycomb</a>
+                <a class="navbar-brand page-scroll" href="index.html">On the Road</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,6 +67,9 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="destination.html">destinations</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="plan.html">plan</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="articlelist.html">Articles</a>
@@ -86,13 +89,13 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div style="position:absolute;margin:300px 0 0 950px">
-        <a href=""><img src="img/finish.jpg" class="image-circle" style="width:150px;height:150px;"></a>
+    <div style="position:absolute;margin:300px 0 0 950px" id="fin">
+        <a onclick="contact()"><img src="img/finish.jpg" class="image-circle" style="width:150px;height:150px;"></a>
         <h3 style="padding-left:25px">FINISH</h3>
     </div>
     
     <section style="background-image:url(img/bgi.jpg);height:700px;padding-bottom:-20px">
-    <div class='container' style="background-color:white;padding-left:40px;height:580px;color:rbg(47,120,204);">
+    <div class='container' style="background-color:white;padding-left:40px;height:580px;color:rbg(47,120,204);" id='form'>
 		
 			<section id="wizard" style="margin-top:-100px;">
 			  <div class="page-header">
@@ -422,12 +425,18 @@
 							      <input type="text" class="form-control" id="inputPassword3" placeholder="">
 							    </div>
 							  </div>
+                            <div class="form-group">
+							    <label for="name"  class="col-sm-2 control-label">Story in Travel:</label>
+							    <div class="col-sm-6">
+							      <textarea rows="3" class="form-control" placeholder="A short story in your travel experience."></textarea>
+							    </div>
+							  </div>
 					    </div>
 						<div class="tab-pane" id="tab3">
 							<div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Destination:</label>
                                 <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="inputPassword3" placeholder="eg: Los Angeles, New York">
+                                  <input type="text" class="form-control" id="inputPassword3" placeholder="">
                                 </div>
                               </div>
                             <div class="form-group">
@@ -455,7 +464,7 @@
                 <hr style="width:1100PX; max-width:2000px;border-width: 1px;">
                 
                 <div class="col-lg-4 col-lg-offset-1" style="width:950px;font-weight:300;">
-                    <span style="color:rgb(100,200,255);float:left;">© 2015  <a href="index.html">HoneyComb</a></span>
+                    <span style="color:rgb(100,200,255);float:left;">© 2015  <a href="index.html">On the Road</a></span>
                     <span>
                         <a href="#" style="margin-left:200px;font-size:15pt">About&nbsp;Us</a>
                         <a href="contact.html" style="margin-left:50px;font-size:15pt">Contact&nbsp;Us</a>
@@ -601,6 +610,11 @@
 		});
 		window.prettyPrint && prettyPrint()
 	});
+        function contact(){
+            document.getElementById("form").innerHTML="<fieldset style='padding:180px 0 0 320px'><div class='col-lg-7'><div class='col-md-13'><div class='alert alert-success' style='width:350px;font-size:20px;margin-left:43px'><strong><span class='glyphicon glyphicon-ok'  style='padding-left:10px'></span> &nbsp;&nbsp;&nbsp;Success! Profile saved.</strong></div><p style='text-align:center;padding-left:10px'>Thank you! <br/>We will recommand interesting blogs according to your profile.</p><div class='error-actions' style='padding-left:70px'><a href='destination.html' class='btn btn-primary btn-lg'><span class='glyphicon glyphicon-start'></span> Start your Journey Now! </a></div></div></div></fieldset>";
+            $('#body').css('height','300px');
+            $('#fin').hide()
+        }
 	</script>
 </body>
 

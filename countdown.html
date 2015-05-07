@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="img/issac.ico"/>
+    <title>On the Road</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+</head>
+
+<body id="page-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="index.html">On the Road</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="input-group" style="width:500px;float:left;padding-top:10px;">
+                <div class="input-group-btn">
+                </div>
+                <input type="text" class="form-control" placeholder="Search for your destination">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="destination.html">destinations</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="plan.html">plan</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="articlelist.html">Diary</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="blog.html">myBlog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<section style="padding-bottom: 0px">
+    <div class="container-fluid"
+         style="margin-top:-100px;min-height:0;height:200px;background-image:url(img/timeline.jpg)">
+        <div class="row ">
+            <div class="container">
+                <div style="padding:80px 0 0 80px;">
+                    <h2><span href="#" style="color:rgb(100,200,255)">Frequently Asked Questions</span></h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="clearfix">
+
+    <style>
+        .bgcontainer {
+            background: url('img/comingsoon.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            padding-bottom:100px;
+        }
+    </style>
+
+    <div class="bgcontainer" style="margin-top: 10px;">
+        <div class="col-md-12 text-center">
+            <h1>Travel Countdown</h1>
+            <br>
+        </div>
+        <div class="col-md-12 text-center">
+            <h2>Your tavel will start in:</h2>
+            <br>
+        </div>
+        <div class="col-md-2 hidden-xs"></div>
+        <div class="col-md-2 col-sm-6 col-xs-9 text-center">
+            <div id="progress_days" style="width: 160px; height: 160px; background-color: transparent;" class="prg sui-progressbar sui-progressbar-circular"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160"><circle cx="80" cy="80" r="64" stroke="white" stroke-width="30" fill="none"></circle><circle cx="80" cy="80" r="64" stroke="white" stroke-width="24" fill="none"></circle><path d="M 79.99999999999999 16 A 64 64 0 1 0 117.61825614671828 28.222912360003363" stroke="#1E98E4" stroke-width="24" fill="none"></path></svg><div class="sui-progressbar-text" style="top: 61px; left: 40px;"><span style="font-size:27px;color:white;">9 days</span> </div></div>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-9 text-center">
+            <div id="progress_hours" style="width: 160px; height: 160px; background-color: transparent;" class="prg sui-progressbar sui-progressbar-circular"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160"><circle cx="80" cy="80" r="67.5" stroke="white" stroke-width="23" fill="none"></circle><circle cx="80" cy="80" r="67.5" stroke="white" stroke-width="17" fill="none"></circle><path d="M 79.99999999999999 12.5 A 67.5 67.5 0 1 0 97.47028554442015 14.80000672548789" stroke="#1E98E4" stroke-width="17" fill="none"></path></svg><div class="sui-progressbar-text" style="top: 61px; left: 27px;"><span style="font-size:27px;color:white;">23 hours</span> </div></div>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-9 text-center">
+            <div id="progress_mins" style="width: 160px; height: 160px; background-color: transparent;" class="prg sui-progressbar sui-progressbar-circular"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160"><circle cx="80" cy="80" r="71.5" stroke="white" stroke-width="15" fill="none"></circle><circle cx="80" cy="80" r="71.5" stroke="white" stroke-width="9" fill="none"></circle><path d="M 79.99999999999999 8.5 A 71.5 71.5 0 1 0 109.08166997991971 14.681499778554041" stroke="#1E98E4" stroke-width="9" fill="none"></path></svg><div class="sui-progressbar-text" style="top: 61px; left: 39px;"><span style="font-size:27px;color:white;">56 min</span> </div></div>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-9 text-center">
+            <div id="progress_secs" style="width: 160px; height: 160px; background-color: transparent;" class="prg sui-progressbar sui-progressbar-circular"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160"><circle cx="80" cy="80" r="74" stroke="white" stroke-width="10" fill="none"></circle><circle cx="80" cy="80" r="74" stroke="white" stroke-width="4" fill="none"></circle><path d="M 79.99999999999999 6 A 74 74 0 0 0 15.914120119951534 117" stroke="#1E98E4" stroke-width="4" fill="none"></path></svg><div class="sui-progressbar-text" style="top: 61px; left: 40px;"><span style="font-size:27px;color:white;">20 sec</span> </div></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center text-center v-center">
+                <h1>Sign Up</h1>
+                <p class="lead">Enter your email to set up a travel reminder</p>
+                <br>
+                <form class="col-lg-12">
+                    <div class="input-group" style="width: 340px; text-align: center; margin: 0 auto;">
+                        <input class="form-control input-lg" placeholder="Enter your email address" value="fysteven@gmail.com" type="text">
+                        <a href="travelPlanner.html"><span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css">
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+            // the date of the release - for example the below will set the release date to
+            // 1st of March (month is 0-based), 2100 at noon 12:00 o'clock
+            // var release_date = new Date(2100, 2, 1, 12, 0, 0);
+            // format is: new Date(year, month [, day, hour, minute, second, millisecond]);
+            // (note that the month is 0-based).
+
+            // for showcase purpose, we set the release date to be 10 days from the current time
+            var release_date = new Date();
+            release_date.setDate(release_date.getDate() + 10);
+
+            var release_unixtime_ms = release_date.getTime(),
+                    total_days = Math.floor((release_unixtime_ms - (new Date()).getTime()) / (24 * 60 * 60 * 1000)),
+                    update_timer = null,
+                    progress_days,
+                    progress_hours,
+                    progress_mins,
+                    progress_secs;
+
+            // define a function to initialize the progressbars
+            function init_progressbars() {
+                // set the width and height of each progressbar to the width of their container
+                $(".prg").each(function () {
+                    $(this)
+                            .width($(this).parent().width())
+                            .height($(this).parent().width());
+                });
+
+                // initialize the progressbar widgets
+                progress_days = $("#progress_days").shieldProgressBar({
+                    min: 0,
+                    max: total_days,
+                    value: total_days,
+                    layout: "circular",
+                    layoutOptions: {
+                        circular: {
+                            borderColor: "white",
+                            width: 30,
+                            borderWidth: 3,
+                            color: "#1E98E4",
+                            backgroundColor: "white"
+                        }
+                    },
+                    text: {
+                        enabled: true,
+                        template: '<span style="font-size:27px;color:white;">{0:n0} days</span> '
+                    },
+                    reversed: true
+                }).swidget();
+
+                progress_hours = $("#progress_hours").shieldProgressBar({
+                    min: 0,
+                    max: 24,
+                    value: 24,
+                    layout: "circular",
+                    layoutOptions: {
+                        circular: {
+                            borderColor: "white",
+                            width: 23,
+                            borderWidth: 3,
+                            color: "#1E98E4",
+                            backgroundColor: "white"
+                        }
+                    },
+                    text: {
+                        enabled: true,
+                        template: '<span style="font-size:27px;color:white;">{0:n0} hours</span> '
+                    },
+                    reversed: true
+                }).swidget();
+
+                progress_mins = $("#progress_mins").shieldProgressBar({
+                    min: 0,
+                    max: 60,
+                    value: 60,
+                    layout: "circular",
+                    layoutOptions: {
+                        circular: {
+                            borderColor: "white",
+                            width: 15,
+                            borderWidth: 3,
+                            color: "#1E98E4",
+                            backgroundColor: "white"
+                        }
+                    },
+                    text: {
+                        enabled: true,
+                        template: '<span style="font-size:27px;color:white;">{0:n0} min</span> '
+                    },
+                    reversed: true
+                }).swidget();
+
+                progress_secs = $("#progress_secs").shieldProgressBar({
+                    min: 0,
+                    max: 60,
+                    value: 60,
+                    layout: "circular",
+                    layoutOptions: {
+                        circular: {
+                            borderColor: "white",
+                            width: 10,
+                            borderWidth: 3,
+                            color: "#1E98E4",
+                            backgroundColor: "white"
+                        }
+                    },
+                    text: {
+                        enabled: true,
+                        template: '<span style="font-size:27px;color:white;">{0:n0} sec</span> '
+                    },
+                    reversed: true
+                }).swidget();
+
+                // restart the update timer
+                clearInterval(update_timer);
+                update_timer = setInterval(update_progressbars, 300);
+            }
+
+            function update_progressbars() {
+                var total_remaining_seconds = Math.floor((release_unixtime_ms - (new Date()).getTime()) / 1000),
+                        remaining_days = Math.floor(total_remaining_seconds / (24 * 60 * 60));
+
+                total_remaining_seconds = total_remaining_seconds % (24 * 60 * 60);
+                var remaining_hours = Math.floor(total_remaining_seconds / (60 * 60));
+
+                total_remaining_seconds = total_remaining_seconds % (60 * 60);
+                var remaining_mins = Math.floor(total_remaining_seconds / 60);
+                var remaining_secs = total_remaining_seconds % 60;
+
+                // update the progressbars if new values are different
+                if (remaining_days != progress_days.value()) {
+                    progress_days.value(remaining_days);
+                }
+                if (remaining_hours != progress_hours.value()) {
+                    progress_hours.value(remaining_hours);
+                }
+                if (remaining_mins != progress_mins.value()) {
+                    progress_mins.value(remaining_mins);
+                }
+                if (remaining_secs != progress_secs.value()) {
+                    progress_secs.value(remaining_secs);
+                }
+            }
+
+            // call this function whenever the window size changes
+            $(window).on("resize", init_progressbars);
+
+            // init the progressbars now
+            init_progressbars();
+        });
+    </script>
+</div>
+
+<style>
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+
+        content: ">"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    }
+</style>
+
+<section id="footer" style='height:120px'>
+    <div class="col-lg-4 col-lg-offset-4 text-center" style="margin-top:-70px">
+        <span style="color: #acadaf; position: absolute; left: 18px; top: 0; font-size: 14pt; text-align: left; font-family: FontAwesome;color:rgb(47,120,204)"></span>
+        <input type="email"
+               style="text-indent: 26px; border-top:0; border-right: 0; border-bottom: 1px solid rgb(47,120,204); border-left:0; color: #82ACC4; width: 100%; font-family: 'adobe-garamond-pro', Garamond, 'Hoefler Text', 'Times New Roman', serif; font-weight: 300; font-size: 14pt; font-style: italic; text-align:left;color:rgb(47,120,204)"
+               value="" name="EMAIL" class="email" id="mce-EMAIL" required="">
+        <label style="display: block; width: 100%; font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12pt; color:rgb(47,120,204);font-weight: 300;;font-style:normal">Join
+            Our Mailing List</label>
+    </div>
+    <div class="container">
+
+        <hr style="width:1100PX; max-width:2000px;border-width: 1px;">
+
+        <div class="col-lg-4 col-lg-offset-1" style="width:950px;font-weight:300;">
+            <span style="color:rgb(100,200,255);float:left;">© 2015  <a href="index.html">On the Road</a></span>
+                    <span>
+                        <a href="#" style="margin-left:200px;font-size:15pt">About&nbsp;Us</a>
+                        <a href="contact.html" style="margin-left:50px;font-size:15pt">Contact&nbsp;Us</a>
+                        <a href="faq.html" style="margin-left:200px;font-size:15pt">FAQ</a>
+                    </span>
+
+            <p style='float:right'>
+                <a href='#'><i class="fa fa-instagram"></i></a>
+                <a href='#'><i class="fa fa-facebook-square"></i></a>
+                <a href='#'><i class="fa fa-twitter-square"></i></a>
+                <a href="#"><i class="fa fa-github-square"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square"></i></a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--modal!-->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <br>
+
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                    <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="signin">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign In Form -->
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Username:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter Username">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Password:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+
+                                <!-- Multiple Checkboxes (inline) -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"></label>
+
+                                    <div class="col-sm-8">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="free" value="true"> <b>Remember
+                                                me</b></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"></label>
+
+                                    <div class="col-sm-8">
+                                        <button id="signin" name="signin" class="btn login"><a href="info.html"
+                                                                                               style="color:white;margin-top:7px;">Sign
+                                            In</a></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="signup">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Email:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter Email">
+                                    </div>
+                                </div>
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Password:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Re-enter:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Re-enter password">
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="confirmsignup"></label>
+
+                                    <div class="col-sm-8">
+                                        <button id="confirmsignup" name="confirmsignup" class="btn login"><a
+                                                href="info.html" style="color:white;">Sign Up</a></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" align="center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal!-->
+
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+</body>
+
+</html>

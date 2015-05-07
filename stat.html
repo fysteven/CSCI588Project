@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="img/issac.ico"/>
+    <title>On the Road</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/colors/color-74c9be.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+</head>
+
+<body id="page-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="index.html">On the Road</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="input-group" style="width:500px;float:left;padding-top:10px;">
+                <div class="input-group-btn">
+                </div>
+                <input type="text" class="form-control" placeholder="Search for your destination">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span> </span>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="destination.html">destinations</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="plan.html">plan</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="articlelist.html">Diary</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="blog.html">myBlog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<section style="padding-bottom: 0px">
+    <div class="container-fluid"
+         style="margin-top:-100px;min-height:0;height:200px;background-image:url(img/timeline.jpg)">
+        <div class="row ">
+            <div class="container">
+                <div style="padding:80px 0 0 80px;">
+                    <h2><span href="#" style="color:rgb(100,200,255)">Welcome, Alice</span></h2>
+
+                    <p>Share your experience with your friends!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="padding:40px 100px 40px 200px">
+            <a href="#">
+                <img class="img-responsive img-circle" src="img/head1.jpeg" alt=""><br/>
+                <a href='#'><span><label
+                        style="font-size:20px;color:black;padding-right:10px;padding-left:37px">Alice</label><i
+                        class="fa fa-venus" style="color:pink"></i></span></a>
+            </a>
+        </div>
+        <div class="col-md-5" style="padding-top:40px">
+            <h4> Current Address: <span id="ipcity"> </span>, <span id="ipregion"> </span>, <span id="ipcountry"> </span> <span id="ippostal"> </span></h4>
+            <h4> IP Address:  <span id="ipaddress"> </span> </h4>
+            <h4> ISP Provider: <span id="iporg"></span> </h4>
+            <script>
+                $.get("http://ipinfo.io", function(response) {
+                    $("#ipcity").append(response.city);
+                    $("#ipregion").append(response.region);
+                    $("#ipcountry").append(response.country);
+                    $("#ippostal").append(response.postal);
+                    $("#ipaddress").append(response.ip);
+
+                    $("#iporg").append(response.org);
+                }, "jsonp");
+            </script>
+
+        </div>
+
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form_hover " style="background-color: #428BCA; ">
+                <p style="text-align: center; margin-top: 20px;">
+                    <i class="fa fa-gears" style="font-size: 147px;"></i><br/>
+                    <span style="font-size: 47px;">Server Load</span>
+                </p>
+
+                <div class="header">
+                    <div class="blur"></div>
+                    <div class="header-text">
+                        <div class="panel panel-success" style="height: 370px; border-bottom:solid 12px #3C763D;">
+                            <div class="panel-heading text-center">
+                                <i class="fa fa-plus" style="font-size: 47px;"></i>
+                            </div>
+                            <div class="panel-body">
+                                <div id="performance1" style="height: 260px;" class="shield-chart">
+                                    <div id="shielddw" class="shield-container"
+                                         style="position: relative; overflow: hidden; width: 328px; height: 260px; line-height: normal; z-index: 0; font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; font-size: 12px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="328" height="260">
+                                            <defs>
+                                                <clipPath id="shielddx">
+                                                    <rect rx="0" ry="0" fill="none" x="0" y="0" width="9999"
+                                                          height="260" stroke-width="0.000001"></rect>
+                                                </clipPath>
+                                                <clipPath id="shielddy">
+                                                    <rect fill="none" x="0" y="0" width="288" height="169"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            <rect rx="0" ry="0" fill="#FFFFFF" x="0" y="0" width="328" height="260"
+                                                  stroke-width="0.000001"></rect>
+                                            <g zIndex="1"></g>
+                                            <g zIndex="1">
+                                                <path fill="none" d="M 30 153.5 L 318 153.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 96.5 L 318 96.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 40.5 L 318 40.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 209.5 L 318 209.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                            </g>
+                                            <g zIndex="2">
+                                                <path fill="none" d="M 160.5 209 L 160.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 279.5 209 L 279.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 41.5 209 L 41.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 30 209.5 L 318 209.5" stroke="#636363"
+                                                      stroke-width="1" zIndex="7" visibility="visible"></path>
+                                            </g>
+                                            <g zIndex="2"></g>
+                                            <g zIndex="3">
+                                                <g visibility="visible" zIndex="0.1" transform="translate(30,40)"
+                                                   clip-path="url(#shielddy)">
+                                                    <rect fill="#1E98E4" x="4" y="142" width="14" height="27"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="28" y="163" width="14" height="6"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="52" y="160" width="14" height="9"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="76" y="165" width="14" height="4"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="100" y="142" width="14" height="27"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="123" y="163" width="14" height="6"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="147" y="160" width="14" height="9"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="171" y="131" width="14" height="38"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="195" y="120" width="14" height="49"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="218" y="93" width="14" height="76"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="242" y="48" width="14" height="121"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                    <rect fill="#1E98E4" x="266" y="18" width="14" height="151"
+                                                          stroke-width="0.000001" stroke="#FFFFFF" rx="0" ry="0"></rect>
+                                                </g>
+                                                <g visibility="visible" zIndex="0.1" transform="translate(30,40)"></g>
+                                            </g>
+                                            <text x="164" y="25"
+                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;color:#4B4B4B;top:10;fill:#4B4B4B;"
+                                                  text-anchor="middle" zIndex="4">
+                                                <tspan x="164">Server Load</tspan>
+                                            </text>
+                                            <g zIndex="7" transform="translate(120,233)">
+                                                <g zIndex="1" clip-path="url(#shielddx)">
+                                                    <g>
+                                                        <g zIndex="1" transform="translate(8,3)">
+                                                            <path fill="#1E98E4" d="M 1 6 L 11 6 11 16 1 16 Z"
+                                                                  style="cursor:pointer;" stroke="#1E98E4"
+                                                                  stroke-width="0.000001"></path>
+                                                            <text x="17" y="15"
+                                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+                                                                  text-anchor="start" zIndex="2">
+                                                                <tspan x="17">Server Load</tspan>
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="41.89099917423617" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="41.89099917423617">0</tspan>
+                                                </text>
+                                                <text x="160.80099091659787" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="160.80099091659787">5</tspan>
+                                                </text>
+                                                <text x="279.71098265895955" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="279.71098265895955">10</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="22" y="214.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">0</tspan>
+                                                </text>
+                                                <text x="22" y="158.51666666666665"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">25</tspan>
+                                                </text>
+                                                <text x="22" y="102.18333333333331"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">50</tspan>
+                                                </text>
+                                                <text x="22" y="45.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">75</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="9">
+                                                <g visibility="visible" zIndex="1" transform="translate(30,40)"
+                                                   clip-path="url(#shielddy)">
+                                                    <rect fill="rgb(192,192,192)" x="4" y="142" width="14" height="27"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="28" y="163" width="14" height="6"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="52" y="160" width="14" height="9"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="76" y="165" width="14" height="4"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="100" y="142" width="14" height="27"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="123" y="163" width="14" height="6"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="147" y="160" width="14" height="9"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="171" y="131" width="14" height="38"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="195" y="120" width="14" height="49"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="218" y="93" width="14" height="76"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="242" y="48" width="14" height="121"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                    <rect fill="rgb(192,192,192)" x="266" y="18" width="14" height="151"
+                                                          isTracker="1430775077731" fill-opacity="0.0001"
+                                                          visibility="visible" style=""></rect>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form_hover " style="background-color: #428BCA;">
+                <p style="text-align: center; margin-top: 20px;">
+                    <i class="fa fa-exclamation-triangle" style="font-size: 147px;"></i><br/>
+                    <span style="font-size: 47px;">Errors</span>
+                </p>
+
+                <div class="header">
+                    <div class="blur"></div>
+                    <div class="header-text">
+                        <div class="panel panel-success" style="height: 370px; border-bottom:solid 12px #3C763D;">
+                            <div class="panel-heading text-center">
+                                <i class="fa fa-plus" style="font-size: 47px;"></i>
+                            </div>
+                            <div class="panel-body">
+                                <div id="performance2" style="height: 260px;" class="shield-chart">
+                                    <div id="shielddz" class="shield-container"
+                                         style="position: relative; overflow: hidden; width: 328px; height: 260px; line-height: normal; z-index: 0; font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; font-size: 12px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="328" height="260">
+                                            <defs>
+                                                <clipPath id="shieldea">
+                                                    <rect rx="0" ry="0" fill="none" x="0" y="0" width="9999"
+                                                          height="260" stroke-width="0.000001"></rect>
+                                                </clipPath>
+                                                <clipPath id="shieldeb">
+                                                    <rect fill="none" x="0" y="0" width="288" height="169"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            <rect rx="0" ry="0" fill="#FFFFFF" x="0" y="0" width="328" height="260"
+                                                  stroke-width="0.000001"></rect>
+                                            <g zIndex="1"></g>
+                                            <g zIndex="1">
+                                                <path fill="none" d="M 30 153.5 L 318 153.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 96.5 L 318 96.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 40.5 L 318 40.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 30 209.5 L 318 209.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                            </g>
+                                            <g zIndex="2">
+                                                <path fill="none" d="M 159.5 209 L 159.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 288.5 209 L 288.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 29.5 209 L 29.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 30 209.5 L 318 209.5" stroke="#636363"
+                                                      stroke-width="1" zIndex="7" visibility="visible"></path>
+                                            </g>
+                                            <g zIndex="2"></g>
+                                            <g zIndex="3">
+                                                <g visibility="visible" zIndex="0.1" transform="translate(30,40)"
+                                                   clip-path="url(#shieldeb)">
+                                                    <path fill="rgb(30,152,228)"
+                                                          d="M 0 162.2 L 25.922592259225922 148.7 L 51.845184518451845 142 L 77.76777677767777 137.5 L 103.69036903690369 119.4 L 129.6129612961296 96.9 L 155.53555355535553 67.6 L 181.45814581458146 142 L 207.38073807380738 18 L 233.3033303330333 67.6 L 259.2259225922592 45.1 L 285.1485148514852 153.2 L 285.1485148514852 169 L 0 169"
+                                                          fill-opacity="0.75" zIndex="0"></path>
+                                                    <path fill="none"
+                                                          d="M 0 162.2 L 25.922592259225922 148.7 L 51.845184518451845 142 L 77.76777677767777 137.5 L 103.69036903690369 119.4 L 129.6129612961296 96.9 L 155.53555355535553 67.6 L 181.45814581458146 142 L 207.38073807380738 18 L 233.3033303330333 67.6 L 259.2259225922592 45.1 L 285.1485148514852 153.2"
+                                                          stroke="#1E98E4" stroke-width="2" zIndex="1"></path>
+                                                </g>
+                                                <g visibility="visible" zIndex="0.1" transform="translate(30,40)"
+                                                   clip-path="none"></g>
+                                            </g>
+                                            <text x="164" y="25"
+                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;color:#4B4B4B;top:10;fill:#4B4B4B;"
+                                                  text-anchor="middle" zIndex="4">
+                                                <tspan x="164">Errors</tspan>
+                                            </text>
+                                            <g zIndex="7" transform="translate(136,233)">
+                                                <g zIndex="1" clip-path="url(#shieldea)">
+                                                    <g>
+                                                        <g zIndex="1" transform="translate(8,3)">
+                                                            <path fill="#1E98E4" d="M 1 6 L 11 6 11 16 1 16 Z"
+                                                                  style="cursor:pointer;" stroke="#1E98E4"
+                                                                  stroke-width="0.000001"></path>
+                                                            <text x="17" y="15"
+                                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+                                                                  text-anchor="start" zIndex="2">
+                                                                <tspan x="17">Errors</tspan>
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="30" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="30">0</tspan>
+                                                </text>
+                                                <text x="159.6129612961296" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="159.6129612961296">5</tspan>
+                                                </text>
+                                                <text x="289.2259225922592" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="289.2259225922592">10</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="22" y="214.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">0</tspan>
+                                                </text>
+                                                <text x="22" y="158.51666666666665"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">25</tspan>
+                                                </text>
+                                                <text x="22" y="102.18333333333331"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">50</tspan>
+                                                </text>
+                                                <text x="22" y="45.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:124px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="22">75</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="9">
+                                                <g visibility="visible" zIndex="1" transform="translate(30,40)">
+                                                    <path fill="none"
+                                                          d="M -10 162.2 L 0 162.2 L 25.922592259225922 148.7 L 51.845184518451845 142 L 77.76777677767777 137.5 L 103.69036903690369 119.4 L 129.6129612961296 96.9 L 155.53555355535553 67.6 L 181.45814581458146 142 L 207.38073807380738 18 L 233.3033303330333 67.6 L 259.2259225922592 45.1 L 285.1485148514852 153.2 L 295.1485148514852 153.2"
+                                                          isTracker="true" stroke-linejoin="bevel" visibility="visible"
+                                                          stroke-opacity="0.0001" stroke="rgb(192,192,192)"
+                                                          stroke-width="22" style=""></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="form_hover " style="background-color: #428BCA;">
+                <p style="text-align: center; margin-top: 20px;">
+                    <i class="fa fa-users" style="font-size: 147px;"></i><br/>
+                    <span style="font-size: 47px;">Users</span>
+                </p>
+
+                <div class="header">
+                    <div class="blur"></div>
+                    <div class="header-text">
+                        <div class="panel panel-success" style="height: 370px; border-bottom:solid 12px #3C763D;">
+                            <div class="panel-heading text-center">
+                                <i class="fa fa-plus" style="font-size: 47px;"></i>
+                            </div>
+                            <div class="panel-body">
+                                <div id="performance3" style="height: 260px;" class="shield-chart">
+                                    <div id="shieldee" class="shield-container"
+                                         style="position: relative; overflow: hidden; width: 328px; height: 260px; line-height: normal; z-index: 0; font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; font-size: 12px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="328" height="260">
+                                            <defs>
+                                                <clipPath id="shieldef">
+                                                    <rect rx="0" ry="0" fill="none" x="0" y="0" width="9999"
+                                                          height="260" stroke-width="0.000001"></rect>
+                                                </clipPath>
+                                                <clipPath id="shieldeg">
+                                                    <rect fill="none" x="0" y="0" width="278" height="169"></rect>
+                                                </clipPath>
+                                            </defs>
+                                            <rect rx="0" ry="0" fill="#FFFFFF" x="0" y="0" width="328" height="260"
+                                                  stroke-width="0.000001"></rect>
+                                            <g zIndex="1"></g>
+                                            <g zIndex="1">
+                                                <path fill="none" d="M 40 167.5 L 318 167.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 40 125.5 L 318 125.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 40 82.5 L 318 82.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 40 40.5 L 318 40.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                                <path fill="none" d="M 40 209.5 L 318 209.5" stroke="#C0C0C0"
+                                                      stroke-width="1" stroke-dasharray="none" zIndex="1"></path>
+                                            </g>
+                                            <g zIndex="2">
+                                                <path fill="none" d="M 164.5 209 L 164.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 289.5 209 L 289.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 39.5 209 L 39.5 215" stroke="#636363"
+                                                      stroke-width="1"></path>
+                                                <path fill="none" d="M 40 209.5 L 318 209.5" stroke="#636363"
+                                                      stroke-width="1" zIndex="7" visibility="visible"></path>
+                                            </g>
+                                            <g zIndex="2"></g>
+                                            <g zIndex="3">
+                                                <g visibility="visible" zIndex="0.1" transform="translate(40,40)"
+                                                   clip-path="url(#shieldeg)">
+                                                    <path fill="none"
+                                                          d="M 0 122.9 C 0 122.9 15.013501350135016 123.10000000000001 25.022502250225024 123.5 C 35.03150315031503 123.9 40.03600360036004 124.9 50.04500450045005 124.9 C 60.05400540054006 124.9 65.05850585058506 111.89999999999999 75.06750675067508 104.1 C 85.07650765076508 96.3 90.0810081008101 93.26 100.0900090009001 85.9 C 110.09900990099011 78.54 115.10351035103511 73.84 125.11251125112511 67.3 C 135.12151215121511 60.75999999999999 140.12601260126013 53.2 150.13501350135016 53.2 C 160.14401440144016 53.2 165.14851485148517 123 175.15751575157518 123 C 185.16651665166518 123 190.1710171017102 19.1 200.1800180018002 19.1 C 210.18901890189022 19.1 215.19351935193518 51.5 225.2025202520252 51.5 C 235.2115211521152 51.5 240.2160216021602 33 250.22502250225023 33 C 260.23402340234026 33 275.2475247524753 117.1 275.2475247524753 117.1"
+                                                          stroke="#1E98E4" stroke-width="3" zIndex="1"></path>
+                                                </g>
+                                                <g visibility="visible" zIndex="0.1" transform="translate(40,40)"
+                                                   clip-path="none">
+                                                    <path fill="#1E98E4"
+                                                          d="M 275.2475247524753 114.1 C 279.24352475247525 114.1 279.24352475247525 120.1 275.2475247524753 120.1 C 271.2515247524753 120.1 271.2515247524753 114.1 275.2475247524753 114.1 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 250.22502250225023 30 C 254.22102250225024 30 254.22102250225024 36 250.22502250225023 36 C 246.22902250225022 36 246.22902250225022 30 250.22502250225023 30 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 225.2025202520252 48.5 C 229.19852025202522 48.5 229.19852025202522 54.5 225.2025202520252 54.5 C 221.2065202520252 54.5 221.2065202520252 48.5 225.2025202520252 48.5 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 200.1800180018002 16.1 C 204.1760180018002 16.1 204.1760180018002 22.1 200.1800180018002 22.1 C 196.18401800180018 22.1 196.18401800180018 16.1 200.1800180018002 16.1 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 175.15751575157518 120 C 179.15351575157518 120 179.15351575157518 126 175.15751575157518 126 C 171.16151575157517 126 171.16151575157517 120 175.15751575157518 120 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 150.13501350135016 50.2 C 154.13101350135017 50.2 154.13101350135017 56.2 150.13501350135016 56.2 C 146.13901350135015 56.2 146.13901350135015 50.2 150.13501350135016 50.2 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 125.11251125112511 64.3 C 129.10851125112512 64.3 129.10851125112512 70.3 125.11251125112511 70.3 C 121.11651125112512 70.3 121.11651125112512 64.3 125.11251125112511 64.3 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 100.0900090009001 82.9 C 104.08600900090009 82.9 104.08600900090009 88.9 100.0900090009001 88.9 C 96.0940090009001 88.9 96.0940090009001 82.9 100.0900090009001 82.9 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 75.06750675067508 101.1 C 79.06350675067507 101.1 79.06350675067507 107.1 75.06750675067508 107.1 C 71.07150675067508 107.1 71.07150675067508 101.1 75.06750675067508 101.1 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 50.04500450045005 121.9 C 54.04100450045005 121.9 54.04100450045005 127.9 50.04500450045005 127.9 C 46.049004500450046 127.9 46.049004500450046 121.9 50.04500450045005 121.9 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 25.022502250225024 120.5 C 29.018502250225023 120.5 29.018502250225023 126.5 25.022502250225024 126.5 C 21.026502250225025 126.5 21.026502250225025 120.5 25.022502250225024 120.5 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                    <path fill="#1E98E4"
+                                                          d="M 0 119.9 C 3.996 119.9 3.996 125.9 0 125.9 C -3.996 125.9 -3.996 119.9 0 119.9 Z"
+                                                          stroke="#1E98E4" stroke-width="2"></path>
+                                                </g>
+                                            </g>
+                                            <text x="164" y="25"
+                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:16px;color:#4B4B4B;top:10;fill:#4B4B4B;"
+                                                  text-anchor="middle" zIndex="4">
+                                                <tspan x="164">New Users</tspan>
+                                            </text>
+                                            <g zIndex="7" transform="translate(123,233)">
+                                                <g zIndex="1" clip-path="url(#shieldef)">
+                                                    <g>
+                                                        <g zIndex="1" transform="translate(8,3)">
+                                                            <path fill="#1E98E4" d="M 1 6 L 11 6 11 16 1 16 Z"
+                                                                  style="cursor:pointer;" stroke="#1E98E4"
+                                                                  stroke-width="0.000001"></path>
+                                                            <text x="17" y="15"
+                                                                  style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;"
+                                                                  text-anchor="start" zIndex="2">
+                                                                <tspan x="17">New Users</tspan>
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="40" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="40">0</tspan>
+                                                </text>
+                                                <text x="165.1125112511251" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="165.1125112511251">5</tspan>
+                                                </text>
+                                                <text x="290.2250225022502" y="226"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="middle" visibility="visible">
+                                                    <tspan x="290.2250225022502">10</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="7">
+                                                <text x="32" y="214.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:119px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="32">-250</tspan>
+                                                </text>
+                                                <text x="32" y="172.6"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:119px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="32">0</tspan>
+                                                </text>
+                                                <text x="32" y="130.35"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:119px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="32">250</tspan>
+                                                </text>
+                                                <text x="32" y="88.1"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:119px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="32">500</tspan>
+                                                </text>
+                                                <text x="32" y="45.85"
+                                                      style="font-family:Segoe UI, Tahoma, Verdana, sans-serif;font-size:11px;width:119px;color:#636363;line-height:14px;fill:#636363;"
+                                                      text-anchor="end" visibility="visible">
+                                                    <tspan x="32">750</tspan>
+                                                </text>
+                                            </g>
+                                            <g zIndex="9">
+                                                <g visibility="visible" zIndex="1" transform="translate(40,40)">
+                                                    <path fill="none"
+                                                          d="M -10 122.9 L 0 122.9 C 0 122.9 15.013501350135016 123.10000000000001 25.022502250225024 123.5 C 35.03150315031503 123.9 40.03600360036004 124.9 50.04500450045005 124.9 C 60.05400540054006 124.9 65.05850585058506 111.89999999999999 75.06750675067508 104.1 C 85.07650765076508 96.3 90.0810081008101 93.26 100.0900090009001 85.9 C 110.09900990099011 78.54 115.10351035103511 73.84 125.11251125112511 67.3 C 135.12151215121511 60.75999999999999 140.12601260126013 53.2 150.13501350135016 53.2 C 160.14401440144016 53.2 165.14851485148517 123 175.15751575157518 123 C 185.16651665166518 123 190.1710171017102 19.1 200.1800180018002 19.1 C 210.18901890189022 19.1 215.19351935193518 51.5 225.2025202520252 51.5 C 235.2115211521152 51.5 240.2160216021602 33 250.22502250225023 33 C 260.23402340234026 33 275.2475247524753 117.1 275.2475247524753 117.1 L 285.2475247524753 117.1"
+                                                          isTracker="true" stroke-linejoin="bevel" visibility="visible"
+                                                          stroke-opacity="0.0001" stroke="rgb(192,192,192)"
+                                                          stroke-width="23" style=""></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+    .form_hover {
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+        height: 360px;
+    }
+
+    .form_hover:hover .header {
+        opacity: 1;
+        transform: translateY(-297px);
+        -webkit-transform: translateY(-297px);
+        -moz-transform: translateY(-297px);
+        -ms-transform: translateY(-297px);
+        -o-transform: translateY(-297px);
+    }
+
+    .form_hover img {
+        z-index: 4;
+    }
+
+    .form_hover .header {
+        position: absolute;
+        top: 290px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .form_hover .blur {
+        height: 240px;
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+    }
+
+    .form_hover .caption-text {
+        z-index: 10;
+        color: #fff;
+        position: absolute;
+        height: 360px;
+        text-align: center;
+        top: -20px;
+        width: 100%;
+    }
+</style>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css"
+      href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css"/>
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        var performance = [12, 3, 4, 2, 12, 3, 4, 17, 22, 34, 54, 67],
+                visits = [3, 9, 12, 14, 22, 32, 45, 12, 67, 45, 55, 7],
+                budget = [23, 19, 11, 134, 242, 352, 435, 22, 637, 445, 555, 57];
+
+        $("#performance1").shieldChart({
+            primaryHeader: {
+                text: "Server Load"
+            },
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                enabled: false
+            },
+            dataSeries: [{
+                seriesType: "bar",
+                collectionAlias: "Server Load",
+                data: performance
+            }]
+        });
+
+        $("#performance2").shieldChart({
+            primaryHeader: {
+                text: "Errors"
+            },
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                enabled: false
+            },
+            dataSeries: [{
+                seriesType: "area",
+                collectionAlias: "Errors",
+                data: visits
+            }]
+        });
+
+        $("#performance3").shieldChart({
+            primaryHeader: {
+                text: "New Users"
+            },
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            tooltipSettings: {
+                enabled: false
+            },
+            dataSeries: [{
+                seriesType: "spline",
+                collectionAlias: "New Users",
+                data: budget
+            }]
+        });
+    });
+</script>
+
+<div class="container" style="padding-top: 80px;">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">Preferences</div>
+            <div class="panel-body text-center">
+                <span>Marketing Emails: </span>
+                <input id="switch1" type="checkbox" checked="checked" value="" />
+                <hr />
+
+                <span>Monthly Newsletter: </span>
+                <input id="switch2" type="checkbox" checked="checked" value="" />
+                <hr />
+
+                <span>Keep History: </span>
+                <input id="switch3" type="checkbox" checked="checked" value="" class="long" />
+                <hr />
+
+                <span>Admin Panel: </span>
+                <input id="switch4" type="checkbox" checked="checked" value="" />
+                <hr />
+
+                <span>Support Panel: </span>
+                <input id="switch5" type="checkbox" checked="checked" value="" />
+                <hr />
+
+                <button type="button" class="btn btn-success">Save Settings</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+<!-- you need to include the shieldui css and js assets in order for the components to work -->
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+<link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+
+<style>
+    .rounded {
+        border-radius: 5px;
+    }
+
+    .long {
+        width:110px;
+    }
+</style>
+
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $("#switch1").shieldSwitch({
+            onText: "ON",
+            offText: "OFF"
+        });
+        $("#switch2").shieldSwitch({
+            onText: "ON",
+            offText: "OFF"
+        });
+        $("#switch3").shieldSwitch({
+            onText: "Yes, save it",
+            width:"200px",
+            offText: "No, delete it",
+            cls: "long",
+        });
+        $("#switch4").shieldSwitch({
+            onText: "Yes",
+            offText: "No",
+            cls: "rounded",
+        });
+        $("#switch5").shieldSwitch({
+            onText: "Yes",
+            offText: "No",
+            cls: "rounded",
+        });
+    });
+</script>
+
+<section id="footer" style='height:120px'>
+    <div class="col-lg-4 col-lg-offset-4 text-center" style="margin-top:-70px">
+        <span style="color: #acadaf; position: absolute; left: 18px; top: 0; font-size: 14pt; text-align: left; font-family: FontAwesome;color:rgb(47,120,204)"></span>
+        <input type="email"
+               style="text-indent: 26px; border-top:0; border-right: 0; border-bottom: 1px solid rgb(47,120,204); border-left:0; color: #82ACC4; width: 100%; font-family: 'adobe-garamond-pro', Garamond, 'Hoefler Text', 'Times New Roman', serif; font-weight: 300; font-size: 14pt; font-style: italic; text-align:left;color:rgb(47,120,204)"
+               value="" name="EMAIL" class="email" id="mce-EMAIL" required="">
+        <label style="display: block; width: 100%; font-family: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12pt; color:rgb(47,120,204);font-weight: 300;;font-style:normal">Join
+            Our Mailing List</label>
+    </div>
+    <div class="container">
+
+        <hr style="width:1100PX; max-width:2000px;border-width: 1px;">
+
+        <div class="col-lg-4 col-lg-offset-1" style="width:950px;font-weight:300;">
+            <span style="color:rgb(100,200,255);float:left;">© 2015  <a href="index.html">On the Road</a></span>
+                    <span>
+                        <a href="#" style="margin-left:200px;font-size:15pt">About&nbsp;Us</a>
+                        <a href="contact.html" style="margin-left:50px;font-size:15pt">Contact&nbsp;Us</a>
+                    </span>
+
+            <p style='float:right'>
+                <a href='#'><i class="fa fa-instagram"></i></a>
+                <a href='#'><i class="fa fa-facebook-square"></i></a>
+                <a href='#'><i class="fa fa-twitter-square"></i></a>
+                <a href="#"><i class="fa fa-github-square"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square"></i></a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--modal!-->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <br>
+
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                    <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="signin">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign In Form -->
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Username:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter Username">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Password:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+
+                                <!-- Multiple Checkboxes (inline) -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"></label>
+
+                                    <div class="col-sm-8">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="free" value="true"> <b>Remember
+                                                me</b></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"></label>
+
+                                    <div class="col-sm-8">
+                                        <button id="signin" name="signin" class="btn login"><a href="info.html"
+                                                                                               style="color:white;margin-top:7px;">Sign
+                                            In</a></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="signup">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <!-- Sign Up Form -->
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Email:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter Email">
+                                    </div>
+                                </div>
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Password:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="keyword" class="col-sm-3 control-label">Re-enter:</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="keywords" id="keywords"
+                                               placeholder="Re-enter password">
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="confirmsignup"></label>
+
+                                    <div class="col-sm-8">
+                                        <button id="confirmsignup" name="confirmsignup" class="btn login"><a
+                                                href="info.html" style="color:white;">Sign Up</a></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" align="center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal!-->
+
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+</body>
+
+</html>
